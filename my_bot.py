@@ -273,9 +273,6 @@ class MyBot(Bot):
         return tuple([self.x, self.y])
 
     def evaluate(self):
-        if(self.state["yourUnit"]["points"] + self.state["opponentUnit"]["points"] > 280 ):
-            return 0
-            self.limit = 999
         if("time" in self.state):
             if(self.state["time"] > 1200):
                 return 150*self.min_distance_to_coin() + 4*self.saw_risk()
